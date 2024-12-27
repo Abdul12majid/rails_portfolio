@@ -7,16 +7,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <%= link_to 'Home', app_pages_index_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <%= link_to 'About', app_pages_about_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
+                        <%= link_to 'Projects', app_pages_project_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <%= link_to 'Contact', app_pages_contact_path, class:"nav-link" %>
                     </li>
                 </ul>
             </div>
