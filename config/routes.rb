@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get "app_pages/index"
-  get "up" => "rails/health#show", as: :rails_health_check
-
+  root "app_pages#index"
+  get "app_pages/projects"
+  get "app_pages/about"
+  get "app_pages/contact"
+  
 end
