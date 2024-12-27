@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Portfolio</a>
+            <%= link_to 'Portfolio', root_path, class:"navbar-brand" %>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <%= link_to 'Home', app_pages_index_path, class:"nav-link" %>
+                        <%= link_to 'Home', root_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
                         <%= link_to 'About', app_pages_about_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
-                        <%= link_to 'Projects', app_pages_project_path, class:"nav-link" %>
+                        <%= link_to 'Projects', app_pages_projects_path, class:"nav-link" %>
                     </li>
                     <li class="nav-item">
                         <%= link_to 'Contact', app_pages_contact_path, class:"nav-link" %>
