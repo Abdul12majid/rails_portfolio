@@ -1,21 +1,36 @@
-<div class="w-full">
+<% content_for :title, "Contact models" %>
+
+<section class="py-5 mt-5">
+
   <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<% end %>
+<div class="container">
+    <h2 class="display-4 text-center fw-bold mb-5 gradient-text">Messages</h2>
+    <div class="card p-4">
+        <div class="table-responsive">
+              <table id="contact_models" class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Message</th>
+        <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @contact_models.each do |contact_model| %>
+        <tr>
+        <th scope="row"><%= contact_model.name %></th>
+        <td><%= contact_model.email %></td>
+        <td><%= contact_model.message %></td>
+        <td><%= link_to "Show Details", contact_model, class:"btn btn-primary btn-sm" %></td>
+        </tr>
+        <% end %>
+        </tbody>
+</table>
 
-  <% content_for :title, "Contact models" %>
-
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Contact models</h1>
-    <%= link_to "New contact model", new_contact_model_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="contact_models" class="min-w-full">
-    <% @contact_models.each do |contact_model| %>
-      <%= render contact_model %>
-      <p>
-        <%= link_to "Show this contact model", contact_model, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
-    <% end %>
-  </div>
 </div>
+    </div>
+</div>
+</section>
