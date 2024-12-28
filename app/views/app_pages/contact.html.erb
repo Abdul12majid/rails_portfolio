@@ -1,26 +1,53 @@
-<main class="container mt-5 pt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card contact-card shadow">
-                    <div class="card-body p-5">
-                        <h2 class="text-center mb-4">Contact Me</h2>
+<section class="py-5 mt-5">
+        <div class="container">
+            <h2 class="display-4 text-center fw-bold mb-5 gradient-text">Get in Touch</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-envelope fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Email</h5>
+                        <p class="text-white">yisaabdulmajid@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-phone fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Phone</h5>
+                        <p class="text-white">+234 7038610584</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Location</h5>
+                        <p class="text-white">Ilorin, Kwara, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4">
                         <form id="contactForm">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="form-label text-light">Name</label>
                                 <input type="text" class="form-control" id="name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label text-light">Email</label>
                                 <input type="email" class="form-control" id="email" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
+                            <div class="mb-4">
+                                <label for="message" class="form-label text-light">Message</label>
                                 <textarea class="form-control" id="message" rows="5" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            <div class="text-center">
+                                <button type="submit" class="btn gradient-button text-white px-4 py-2 rounded-pill">Send Message</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
