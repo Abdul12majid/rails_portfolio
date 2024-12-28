@@ -1,32 +1,71 @@
-<%= form_with(model: contact_model, class: "contents") do |form| %>
-  <% if contact_model.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(contact_model.errors.count, "error") %> prohibited this contact_model from being saved:</h2>
+<section class="py-5 mt-5">
+        <div class="container">
+            <h2 class="display-4 text-center fw-bold mb-5 gradient-text">Get in Touch</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-envelope fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Email</h5>
+                        <p class="text-white">yisaabdulmajid@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-phone fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Phone</h5>
+                        <p class="text-white">+234 7038610584</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center p-4 h-100">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3 gradient-text"></i>
+                        <h5 class="text-white fs-4 fw-bold mb-2">Location</h5>
+                        <p class="text-white">Ilorin, Kwara, Nigeria</p>
+                    </div>
+                </div>
+            </div>
 
-      <ul>
-        <% contact_model.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4">
+  <%= form_with(model: contact_model, id: "contactForm", class: "contents") do |form| %>
+      <% if contact_model.errors.any? %>
+        <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+          <h2><%= pluralize(contact_model.errors.count, "error") %> prohibited this contact_model from being saved:</h2>
+          <ul>
+            <% contact_model.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="my-5">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <!-- Name Field -->
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label text-light" %>
+    <%= form.text_field :name, class: "form-label text-light form-control", required: true %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <!-- Email Field -->
+  <div class="mb-3">
+    <%= form.label :email, class: "form-label text-light" %>
+    <%= form.email_field :email, class: "form-control", required: true %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :message %>
-    <%= form.textarea :message, rows: 4, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  <!-- Message Field -->
+  <div class="mb-4">
+    <%= form.label :message, class: "form-label text-light" %>
+    <%= form.text_area :message, rows: 5, class: "form-control", required: true %>
   </div>
 
-  <div class="inline">
-    <%= form.submit class: "btn btn-primary" %>
+  <!-- Submit Button -->
+  <div class="text-center">
+    <%= form.submit "Send Message", class: "btn gradient-button text-white px-4 py-2 rounded-pill" %>
   </div>
 <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
