@@ -1,17 +1,29 @@
 <div id="<%= dom_id contact_model %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= contact_model.name %>
-  </p>
+<section class="py-5 mt-5">
+        <div class="container">
+            <h2 class="display-4 text-center fw-bold mb-5 gradient-text">Get in Touch</h2>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
-    <%= contact_model.email %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Message:</strong>
-    <%= contact_model.message %>
-  </p>
-
+  <div class="card">
+    <h5 class="card-header"><%= contact_model.name %></h5>
+    <div class="card-body">
+      <h5 class="card-title"><i><%= contact_model.email %></i></h5>
+      <p class="card-text"><%= contact_model.message %></p></br>
+      <hr></br>
+      <%= link_to "Back", contact_models_path, class: "btn btn-outline-primary btn-sm" %>&nbsp;&nbsp;
+      <%= link_to "Edit", edit_contact_model_path(@contact_model), class: "btn btn-primary btn-sm" %>&nbsp;&nbsp; 
+      
+      <% button_to "Delete", @contact_model, method: :delete, class: "btn btn-danger btn-sm" %>
+    </div>
+  </div>
 </div>
+</div>
+
+<style type="text/css">
+  .card{
+    color: white;
+  }
+  .card-title{
+    color: skyblue;
+    text-align: center;
+  }
+</style>
